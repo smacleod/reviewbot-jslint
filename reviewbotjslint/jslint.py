@@ -3,11 +3,12 @@ import json
 
 from reviewbot.tools import Tool
 from reviewbot.tools.process import execute
+from reviewbot.utils import is_exe_in_path
 
 
 class JSLintTool(Tool):
     name = 'JSLint Code Quality Tool'
-    version = '0.1'
+    version = '0.2'
     description = ("Checks syntax errors and validates JavaScript using the "
                    "JSLint tool.")
     options = [
@@ -112,6 +113,14 @@ class JSLintTool(Tool):
             },
         },
     ]
+
+    def check_dependencies(self):
+        # TODO: Add extra checking which ensures the 'js' command
+        # we are hitting supports the command line arguments we use
+        # when running jslint. Some of the options we use may be
+        # spidermonkey specific, and we should ensure they will work
+        # as expected.
+        return is_exe_in_path('js')
 
     def handle_files(self, files):
         # Get path to js script relative to current package.
