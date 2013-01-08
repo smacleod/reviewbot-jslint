@@ -15,7 +15,7 @@ Spidermonkey
 
 * **Installation:** For instructions on building and installing Spidermonkey, please consult the Mozilla Developer Network [documentation](https://developer.mozilla.org/en-US/docs/SpiderMonkey/Build_Documentation).
 
-* **Running JSLint on Spidermonkey:** In order for reviewbot-jslint to be able to run jslint.js on your system, the path to the js executable (e.g. js-1.8.5/js/src)must be added to the system path.
+* **Running JSLint on Spidermonkey:** In order for reviewbot-jslint to be able to run jslint.js on your system, the path to the js executable (e.g. js-1.8.5/js/src) must be added to the system path.
 
 Installing and Registering Tasks
 --------------------------------
@@ -23,7 +23,7 @@ Installing and Registering Tasks
 Review Bot workers are able to find installed tools using
 [Entry Points](http://packages.python.org/distribute/pkg_resources.html#entry-points).
 
-In order to register reviewbot-jslint as a tool, run the following from the top-levl reviewbot-jslint directory:
+In order to register reviewbot-jslint as a tool, run the following from the top-level reviewbot-jslint directory:
 
     python setup.py install
 
