@@ -1,5 +1,6 @@
 from setuptools import setup, find_packages
 
+
 PACKAGE_NAME = "reviewbotjslint"
 VERSION = "0.1"
 
@@ -13,7 +14,7 @@ setup(
     author_email="allyshias@gmail.com",
     packages=find_packages(),
     package_data={
-        'reviewbotjslint': ['lib/*.js',]
+        'reviewbotjslint': ['lib/*.js', ]
     },
     entry_points={
         'reviewbot.tools': [
